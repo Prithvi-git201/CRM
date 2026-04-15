@@ -44,4 +44,15 @@ public class RegisterController {
         }
     }
 
+    // Alias methods for test compatibility
+    public String showFormRegister(Model model) {
+        User user = new User();
+        return showRegistrationPage(model, user);
+    }
+
+    public String processRequestRegister(User user, BindingResult bindingResult) {
+        Model model = new org.springframework.ui.ExtendedModelMap();
+        return processRegistrationForm(model, user, bindingResult);
+    }
+
 }

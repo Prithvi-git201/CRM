@@ -501,4 +501,37 @@ public class ContractController {
         return "contract/show-list";
     }
 
+    // Alias methods for test compatibility
+    public String showFormSearchByName(Model model) {
+        return showNameSearchForm(model);
+    }
+
+    public String processRequestSearchByName(Contract contract, Model model) {
+        return processRequestNameSearch(contract, model);
+    }
+
+    public String showFormSearchByValue(Model model) {
+        return showValueLeesThanEqualSearchForm(model);
+    }
+
+    public String showFormSearchByBeginDate(Model model) {
+        return showBeginDateSearchForm(model);
+    }
+
+    public String showFormSearchByEndDate(Model model) {
+        return showEndDateSearchForm(model);
+    }
+
+    public String showFormSearchByStatus(Model model) {
+        return showStatusSearchForm(model);
+    }
+
+    public String showFormSearchByCustomer(Model model) {
+        return showCustomerSearchForm(model);
+    }
+
+    public String showFormSearchByUser(Model model) {
+        return showUserSearchForm(model);
+    }
+
 }

@@ -23,4 +23,20 @@ public class Export {
         return "";
     }
 
+    // Methods for test compatibility
+    public String exportToPdf(Model model) {
+        model.addAttribute("users", userService.listAllUsers());
+        return "pdfView";
+    }
+
+    public String exportToExcel(Model model) {
+        model.addAttribute("users", userService.listAllUsers());
+        return "excelView";
+    }
+
+    public String exportToCsv(Model model) {
+        model.addAttribute("users", userService.listAllUsers());
+        return "csvView";
+    }
+
 }

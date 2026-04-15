@@ -14,4 +14,9 @@ public class MyErrorController implements ErrorController {
         return "Error handling";
     }
 
+    // Alias method for test compatibility
+    public String handleError() {
+        return error();
+    }
+
 }
